@@ -30,12 +30,7 @@ local wqru = ndwe(cpld, 0, 0x4)
 local ybkj = ndwe(wqru, 0x28 * 2, 0x4)
 local bsht = ndwe(ybkj, 0x22 * 2, 0x4)
 
-local asle = ndwe(bsht, 0x1F8 * 2, 0x4)
-local mtxe = gg.getValues({{address = asle + 0x3E + 0x3E, flags = 0x10}})[1].value
-
-if mtxe == 1.0 then
-    vfka(asle, 0x3E + 0x3E, 0x10, 0.68)
-end
+gg.alert("Aim [Test]")
 
 local hvur = false
 
@@ -53,7 +48,7 @@ while true do
         local jtzf = ezjw + 0x32 + 0x1E
 
         if not hvur and fbnu ~= 0 then
-            vfka(oxdm, 0x2A + 0x22, 0x10, -0.06)
+            vfka(oxdm, 0x2A + 0x22, 0x10, 0)
             gg.addListItems({{address = jtzf, flags = 4, value = fbnu, freeze = true}})
             hvur = true
         end
