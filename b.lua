@@ -40,6 +40,7 @@ while true do
 
     if bsht == 0 or khvb == 0 then
         gg.clearList()
+        gg.toast("aimbot off")
     end
 
     if khvb == 1 and ezjw ~= 0 then
@@ -49,12 +50,14 @@ while true do
 
         if not hvur and fbnu ~= 0 then
             vfka(oxdm, 0x2A + 0x22, 0x10, 0)
+            gg.toast("aimbot on")
             gg.addListItems({{address = jtzf, flags = 4, value = fbnu, freeze = true}})
             hvur = true
         end
     else
         if hvur then
             gg.clearList()
+            gg.toast("aimbot off")
             hvur = false
         end
     end
